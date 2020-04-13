@@ -5,9 +5,9 @@ namespace Tests\Feature;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
-use App\Decorator\IndividualDiscount;
-use App\Decorator\IndividualContainer;
-use App\Decorator\Client;
+use App\Patterns\Decorator\IndividualDiscount;
+use App\Patterns\Decorator\IndividualContainer;
+use App\Patterns\Decorator\Client;
 
 class DecoratorTest extends TestCase
 {

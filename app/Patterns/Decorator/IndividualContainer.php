@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Decorator;
-
-use App\Decorator\Container;
+namespace App\Patterns\Decorator;
 
 class IndividualContainer extends Container
 {

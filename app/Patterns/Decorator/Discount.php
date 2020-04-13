@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Decorator;
+namespace App\Patterns\Decorator;
 
 interface Discount
 {

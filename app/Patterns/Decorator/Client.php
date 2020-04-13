@@ -1,10 +1,8 @@
 <?php
 
-namespace App\Decorator;
+namespace App\Patterns\Decorator;
 
-use App\Decorator\Discount;
-
-class Client
+class Client implements Discount
 {
     protected $discount;
 

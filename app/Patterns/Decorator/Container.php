@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Decorator;
-
-use App\Decorator\Discount;
+namespace App\Patterns\Decorator;
 
 class Container implements Discount
 {
