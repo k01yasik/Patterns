@@ -27,21 +27,14 @@ class DiscountFactory
         $key = $this->getKey($sharedState);
 
         if (!isset($this->flyweights[$key])) {
-            echo "FlyweightFactory: Can't find a flyweight, creating new one.\n";
             $this->flyweights[$key] = new Discount($sharedState);
-        } else {
-            echo "FlyweightFactory: Reusing existing flyweight.\n";
-        }
+        } 
 
         return $this->flyweights[$key];
     }
 
-    public function listFlyweights(): void
+    public function countFlyweights(): int
     {
-        $count = count($this->flyweights);
-        echo "\nDiscountFactory: I have $count flyweights:\n";
-        foreach ($this->flyweights as $key => $flyweight) {
-            echo $key . "\n";
-        }
+        return count($this->flyweights);
     }
 }
