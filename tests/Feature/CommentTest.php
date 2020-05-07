@@ -27,20 +27,14 @@ class CommentTest extends TestCase
         $this->comment8 = new Comment(8, 3);
         $this->comment11 = new Comment(11, 0);
 
-        $this->comment1->addChilds([
-            $this->comment3,
-            $this->comment4,
-            $this->comment9,
-            $this->comment10
-        ]);
-        $this->comment4->addChilds([
-            $this->comment5,
-            $this->comment7,
-        ]);
-        $this->comment5->addChilds([
-            $this->comment6,
-            $this->comment8,
-        ]);
+        $this->comment6->setParent(5);
+        $this->comment8->setParent(8);
+        $this->comment5->setParent(4);
+        $this->comment7->setParent(4);
+        $this->comment3->setParent(1);
+        $this->comment4->setParent(1);
+        $this->comment9->setParent(1);
+        $this->comment10->setParent(1);
 
         $this->commentContainer = new CommentContainer();
         $this->commentContainer->addComment($this->comment1);
@@ -83,10 +77,10 @@ class CommentTest extends TestCase
         {
             array_push($result, $comment);
 
-            if ($comment->hasChild()) {                
-                $childComments = $comment->getChilds();
-                $sortedChildComments = $sorter->sortComments($childComments);
-                foreach ($sortedChildComments as $childComment) {
+            $commentChilds = $this->commentContainer->getChildsByComment($comment);
+
+            if (count($commentChilds) > 0) {               
+                foreach ($commentChilds as $childComment) {
                     array_push($result, $childComment);
                 }
             }
@@ -111,17 +105,17 @@ class CommentTest extends TestCase
         {
             array_push($result, $comment);
 
-            if ($comment->hasChild()) {                
-                $childComments = $comment->getChilds();
-                $sortedChildComments = $sorter->sortComments($childComments);
-                foreach ($sortedChildComments as $childComment) {
+            $commentChilds = $this->commentContainer->getChildsByComment($comment);
+
+            if (count($commentChilds) > 0) {               
+                foreach ($commentChilds as $childComment) {
                     array_push($result, $childComment);
 
-                    if ($childComment->hasChild()) {
-                        $childComments_2 = $childComment->getChilds();
-                        $sortedChildComments_2 = $sorter->sortComments($childComments_2);
-                        foreach ($sortedChildComments_2 as $childComment_2) {
-                            array_push($result, $childComment_2);
+                    $commentChilds2 = $this->commentContainer->getChildsByComment($childComment);
+
+                    if (count($commentChilds2) > 0) {
+                        foreach ($commentChilds2 as $childComment2) {
+                            array_push($result, $childComment2);
                         }
                     }
                 }

@@ -6,7 +6,7 @@ class Comment
 {
     private $number;
     private $level;
-    private $childs = [];
+    private $parent;
 
     public function __construct(int $number, int $level)
     {
@@ -22,22 +22,15 @@ class Comment
     public function getLevel(): int
     {
         return $this->level;
+    }    
+
+    public function getParent()
+    {
+        return $this->parent;
     }
 
-    public function addChilds(Array $childs): void
+    public function setParent(int $parent): void
     {
-        foreach ($childs as $child) {
-            array_push($this->childs, $child);
-        }
-    }
-
-    public function hasChild(): bool
-    {
-        return count($this->childs) > 0 ? true : false;
-    }
-
-    public function getChilds(): Array
-    {
-        return $this->childs;
+        $this->parent = $parent;
     }
 }
