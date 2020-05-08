@@ -49,12 +49,14 @@ class CommentTest extends TestCase
         $this->commentContainer->addComment($this->comment10);
         $this->commentContainer->addComment($this->comment11);
 
+        $this->commentContainer->setMaxLevel(3);
+
         $this->comments = $this->commentContainer->getComments();
     }
 
     public function testSortRootComments()
     {        
-        $firstLevel = $this->commentContainer->getCommentsByLevel(0);
+        $firstLevel = $this->commentContainer->getRootComments();
 
         $sorter = new Sorter();
         $sortedRootComments = $sorter->sortComments($firstLevel);
@@ -66,7 +68,7 @@ class CommentTest extends TestCase
 
     public function testSortRootCommentsWithChild()
     {
-        $rootLevel = $this->commentContainer->getCommentsByLevel(0);
+        $rootLevel = $this->commentContainer->getRootComments();
 
         $sorter = new Sorter();
         $sortedRootComments = $sorter->sortComments($rootLevel);
@@ -94,15 +96,14 @@ class CommentTest extends TestCase
 
     public function testSortRootCommentsWith2LevelsChild()
     {
-        $rootLevel = $this->commentContainer->getCommentsByLevel(0);
+        $rootLevel = $this->commentContainer->getRootComments();
 
         $sorter = new Sorter();
         $sortedRootComments = $sorter->sortComments($rootLevel);
 
         $result = [];
 
-        foreach ($sortedRootComments as $comment)
-        {
+        foreach ($sortedRootComments as $comment) {
             array_push($result, $comment);
 
             $commentChilds = $this->commentContainer->getChildsByComment($comment);
