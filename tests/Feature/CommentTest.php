@@ -28,7 +28,7 @@ class CommentTest extends TestCase
         $this->comment11 = new Comment(11, 0);
 
         $this->comment6->setParent(5);
-        $this->comment8->setParent(8);
+        $this->comment8->setParent(5);
         $this->comment5->setParent(4);
         $this->comment7->setParent(4);
         $this->comment3->setParent(1);
@@ -55,7 +55,7 @@ class CommentTest extends TestCase
     }
 
     public function testSortRootComments()
-    {        
+    {
         $firstLevel = $this->commentContainer->getRootComments();
 
         $sorter = new Sorter();
@@ -66,35 +66,7 @@ class CommentTest extends TestCase
         $this->assertEquals(11, $sortedRootComments[2]->getNumber());
     }
 
-    public function testSortRootCommentsWithChild()
-    {
-        $rootLevel = $this->commentContainer->getRootComments();
-
-        $sorter = new Sorter();
-        $sortedRootComments = $sorter->sortComments($rootLevel);
-
-        $result = [];
-
-        foreach ($sortedRootComments as $comment)
-        {
-            array_push($result, $comment);
-
-            $commentChilds = $this->commentContainer->getChildsByComment($comment);
-
-            if (count($commentChilds) > 0) {               
-                foreach ($commentChilds as $childComment) {
-                    array_push($result, $childComment);
-                }
-            }
-        }
-
-        $this->assertEquals(1, $result[0]->getNumber());
-        $this->assertEquals(4, $result[2]->getNumber());
-        $this->assertEquals(10, $result[4]->getNumber());
-        $this->assertEquals(11, $result[6]->getNumber());
-    }
-
-    public function testSortRootCommentsWith2LevelsChild()
+    public function testSortRootCommentsWithAllLevelsChild()
     {
         $rootLevel = $this->commentContainer->getRootComments();
 
@@ -106,25 +78,19 @@ class CommentTest extends TestCase
         foreach ($sortedRootComments as $comment) {
             array_push($result, $comment);
 
-            $commentChilds = $this->commentContainer->getChildsByComment($comment);
+            $childComments = $this->commentContainer->getAllLevelChildComments($comment);
 
-            if (count($commentChilds) > 0) {               
-                foreach ($commentChilds as $childComment) {
-                    array_push($result, $childComment);
-
-                    $commentChilds2 = $this->commentContainer->getChildsByComment($childComment);
-
-                    if (count($commentChilds2) > 0) {
-                        foreach ($commentChilds2 as $childComment2) {
-                            array_push($result, $childComment2);
-                        }
-                    }
-                }
+            foreach ($childComments as $child) {
+                array_push($result, $child);
             }
         }
 
+        $this->assertEquals(1, $result[0]->getNumber());
+        $this->assertEquals(4, $result[2]->getNumber());
+        $this->assertEquals(6, $result[4]->getNumber());
+        $this->assertEquals(7, $result[6]->getNumber());
         $this->assertEquals(5, $result[3]->getNumber());
-        $this->assertEquals(9, count($result));
+        $this->assertEquals(11, count($result));
     }
 
     public function tearDown(): void

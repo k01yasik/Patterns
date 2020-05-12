@@ -58,6 +58,27 @@ class CommentContainer
             }
         }
 
-        return $result; 
+        return $result;
+    }
+
+    public function getAllLevelChildComments($comment)
+    {
+        $result = [];
+
+        $commentChilds = $this->getChildsByComment($comment);
+
+        if (count($commentChilds) > 0) {
+            foreach ($commentChilds as $childComment) {
+                array_push($result, $childComment);
+
+                $childs = $this->getAllLevelChildComments($childComment);
+
+                foreach ($childs as $child) {
+                    array_push($result, $child);
+                }
+            }
+        }
+
+        return $result;
     }
 }
