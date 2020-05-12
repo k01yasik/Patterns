@@ -15,7 +15,7 @@ abstract class AbstractHandler implements Handler
         return $handler;
     }
 
-    public function handle(string $request): ?string
+    public function handle(string $request): ?int
     {
         if ($this->nextHandler) {
             return $this->nextHandler->handle($request);
