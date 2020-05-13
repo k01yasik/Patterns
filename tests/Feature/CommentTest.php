@@ -49,6 +49,8 @@ class CommentTest extends TestCase
         $this->commentContainer->addComment($this->comment10);
         $this->commentContainer->addComment($this->comment11);
 
+        $this->commentContainer->setMaxLevel(3);
+
         $this->comments = $this->commentContainer->getComments();
     }
 
