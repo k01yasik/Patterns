@@ -15,56 +15,36 @@ class CommentTest extends TestCase
     {
         parent::setUp();
 
-        $this->comment1 = new Comment(1, 0);
-        $this->comment2 = new Comment(2, 0);
-        $this->comment3 = new Comment(3, 1);
-        $this->comment4 = new Comment(4, 1);
-        $this->comment9 = new Comment(9, 1);
-        $this->comment10 = new Comment(10, 1);
-        $this->comment5 = new Comment(5, 2);
-        $this->comment7 = new Comment(7, 2);
-        $this->comment6 = new Comment(6, 3);
-        $this->comment8 = new Comment(8, 3);
-        $this->comment11 = new Comment(11, 0);
-
-        $this->comment6->setParent(5);
-        $this->comment8->setParent(5);
-        $this->comment5->setParent(4);
-        $this->comment7->setParent(4);
-        $this->comment3->setParent(1);
-        $this->comment4->setParent(1);
-        $this->comment9->setParent(1);
-        $this->comment10->setParent(1);
-
         $this->commentContainer = new CommentContainer();
-        $this->commentContainer->addComment($this->comment1);
-        $this->commentContainer->addComment($this->comment2);
-        $this->commentContainer->addComment($this->comment3);
-        $this->commentContainer->addComment($this->comment4);
-        $this->commentContainer->addComment($this->comment5);
-        $this->commentContainer->addComment($this->comment6);
-        $this->commentContainer->addComment($this->comment7);
-        $this->commentContainer->addComment($this->comment8);
-        $this->commentContainer->addComment($this->comment9);
-        $this->commentContainer->addComment($this->comment10);
-        $this->commentContainer->addComment($this->comment11);
 
-        $this->commentContainer->setMaxLevel(3);
+        for($i = 1; $i <= 1000; $i++) {
+
+            $id1 = random_int(1, 10000);
+            $id2 = random_int(1, 10000);
+            $level1 = random_int(0, 8);
+            $level2 = $level1 + 1;
+
+            if ($id1 = $id2) $id2 += 1;
+
+            if ($id1 < $id2) {
+                $comment1 = new Comment($id1, $level1);
+                $comment2 = new Comment($id2, $level2);
+
+                $this->commentContainer->addComment($comment1);
+                $this->commentContainer->addComment($comment2);
+            } else {
+                $comment1 = new Comment($id2, $level1);
+                $comment2 = new Comment($id1, $level2);
+
+                $this->commentContainer->addComment($comment1);
+                $this->commentContainer->addComment($comment2);
+            }
+        }
+
+        $this->commentContainer->setMaxLevel(9);
 
         $this->comments = $this->commentContainer->getComments();
-    }
-
-    public function testSortRootComments()
-    {
-        $firstLevel = $this->commentContainer->getRootComments();
-
-        $sorter = new Sorter();
-        $sortedRootComments = $sorter->sortComments($firstLevel);
-
-        $this->assertEquals(1, $sortedRootComments[0]->getNumber());
-        $this->assertEquals(2, $sortedRootComments[1]->getNumber());
-        $this->assertEquals(11, $sortedRootComments[2]->getNumber());
-    }
+    }    
 
     public function testSortRootCommentsWithAllLevelsChild()
     {
@@ -85,12 +65,7 @@ class CommentTest extends TestCase
             }
         }
 
-        $this->assertEquals(1, $result[0]->getNumber());
-        $this->assertEquals(4, $result[2]->getNumber());
-        $this->assertEquals(6, $result[4]->getNumber());
-        $this->assertEquals(7, $result[6]->getNumber());
-        $this->assertEquals(5, $result[3]->getNumber());
-        $this->assertEquals(11, count($result));
+        dd(count($result));
     }
 
     public function tearDown(): void

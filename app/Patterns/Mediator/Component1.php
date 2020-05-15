@@ -4,6 +4,8 @@ namespace App\Patterns\Mediator;
 
 class Component1 extends BaseComponent
 {
+    private $result;
+
     public function doA(): void
     {
         $this->mediator->notify($this, "A");
@@ -11,6 +13,11 @@ class Component1 extends BaseComponent
 
     public function doB(): void
     {
-        $this->mediator->notify($this, "B");
+        $this->result = 40;
+    }
+
+    public function getResult(): int
+    {
+        return $this->result;
     }
 }

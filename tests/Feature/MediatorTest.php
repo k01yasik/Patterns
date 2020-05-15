@@ -18,8 +18,12 @@ class MediatorTest extends TestCase
 
         $mediator = new ConcreteMediator($c1, $c2);
 
-        $this->assertEquals('', $c1->doA());
+        $c1->doA();
 
-        $this->assertEquals('', $c2->doD());
+        $c2->doD();
+
+        $this->assertEquals(20, $c2->getResult());
+
+        $this->assertEquals(40, $c1->getResult());
     }
 }

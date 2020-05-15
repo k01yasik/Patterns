@@ -24,7 +24,6 @@ class ConcreteMediator implements Mediator
 
         if ($event == "D") {
             $this->component1->doB();
-            $this->component2->doC();
         }
     }
 }
