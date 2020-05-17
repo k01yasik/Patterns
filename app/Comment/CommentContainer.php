@@ -14,6 +14,16 @@ class CommentContainer
         $this->max_level = $level;
     }
 
+    public function getComment(int $i): Comment
+    {
+        return $this->comments[$i];
+    }
+
+    public function changeComment(Comment $comment, int $i)
+    {
+        $this->comments[$i] = $comment;
+    }
+
     public function getMaxLevel()
     {
         return $this->max_level;

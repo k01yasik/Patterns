@@ -17,34 +17,33 @@ class CommentTest extends TestCase
 
         $this->commentContainer = new CommentContainer();
 
-        for($i = 1; $i <= 1000; $i++) {
+        $this->commentContainer->addComment(new Comment(1, 0));
 
-            $id1 = random_int(1, 10000);
-            $id2 = random_int(1, 10000);
-            $level1 = random_int(0, 8);
-            $level2 = $level1 + 1;
+        for($i = 2; $i <= 1000; $i++) {
+            $this->commentContainer->addComment(new Comment($i, random_int(0, 9)));
+        }
 
-            if ($id1 = $id2) $id2 += 1;
+        for ($i = 1; $i < 1000; $i++) {
+            $comment = $this->commentContainer->getComment($i);
+            $level = $comment->getLevel();
+            $id = $comment->getNumber();
+            if ($level > 0) {
+                for ($j = 0; $j < $id; $j++) {
+                    $commentParent = $this->commentContainer->getComment($j);
 
-            if ($id1 < $id2) {
-                $comment1 = new Comment($id1, $level1);
-                $comment2 = new Comment($id2, $level2);
-
-                $this->commentContainer->addComment($comment1);
-                $this->commentContainer->addComment($comment2);
-            } else {
-                $comment1 = new Comment($id2, $level1);
-                $comment2 = new Comment($id1, $level2);
-
-                $this->commentContainer->addComment($comment1);
-                $this->commentContainer->addComment($comment2);
+                    if ($commentParent->getLevel() + 1 == $level) {
+                        $comment->setParent($commentParent->getNumber());
+                        $this->commentContainer->changeComment($comment, $i);
+                        break;
+                    }
+                }
             }
         }
 
         $this->commentContainer->setMaxLevel(9);
 
         $this->comments = $this->commentContainer->getComments();
-    }    
+    }
 
     public function testSortRootCommentsWithAllLevelsChild()
     {
