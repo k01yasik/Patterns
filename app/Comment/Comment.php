@@ -22,7 +22,12 @@ class Comment
     public function getLevel(): int
     {
         return $this->level;
-    }    
+    }
+    
+    public function setLevel(int $level): void
+    {
+        $this->level = $level;
+    }
 
     public function getParent()
     {
