@@ -16,17 +16,15 @@ class CommentTest extends TestCase
     {
         parent::setUp();
 
-        $time1 = Carbon::now();
-
         $this->commentContainer = new CommentContainer();
 
         $this->commentContainer->addComment(new Comment(0, 0));
 
-        for($i = 1; $i < 10000; $i++) {
-            $this->commentContainer->addComment(new Comment($i, random_int(0, 9)));
+        for($i = 1; $i < 100; $i++) {
+            $this->commentContainer->addComment(new Comment($i, random_int(0, 3)));
         }
 
-        for ($i = 1; $i < 1000; $i++) {
+        for ($i = 1; $i < 100; $i++) {
             $comment = $this->commentContainer->getComment($i);
             $level = $comment->getLevel();
             $id = $comment->getNumber();
@@ -60,33 +58,33 @@ class CommentTest extends TestCase
             }
         }
 
-        $this->commentContainer->setMaxLevel(9);
+        $this->commentContainer->setMaxLevel(4);
 
         $this->comments = $this->commentContainer->getComments();
 
-        file_put_contents('result.txt', print_r($this->comments, true));
+        //file_put_contents('result.txt', print_r($this->comments, true));
     }
 
     public function testSortRootCommentsWithAllLevelsChild()
     {
+        $result = [];
+
         $rootLevel = $this->commentContainer->getRootComments();
 
         $sorter = new Sorter();
         $sortedRootComments = $sorter->sortComments($rootLevel);
 
-        $result = [];
-
         foreach ($sortedRootComments as $comment) {
-            array_push($result, $comment);
+            $result[] = $comment;
 
             $childComments = $this->commentContainer->getAllLevelChildComments($comment);
 
             foreach ($childComments as $child) {
-                array_push($result, $child);
+                $result[] = $child;
             }
         }
 
-        $this->assertEquals(10000, count($result));
+        $this->assertEquals(100, count($result));
     }
 
     public function tearDown(): void

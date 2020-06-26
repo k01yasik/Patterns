@@ -1,0 +1,703 @@
+Array
+(
+    [0] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 0
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [1] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 1
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [2] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 2
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [3] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 3
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [4] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 4
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [5] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 5
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [6] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 6
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [7] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 7
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [8] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 8
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [9] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 9
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [10] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 10
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [11] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 11
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [12] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 12
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [13] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 13
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [14] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 14
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [15] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 15
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [16] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 16
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [17] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 17
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [18] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 18
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [19] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 19
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [20] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 20
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [21] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 21
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [22] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 22
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [23] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 23
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [24] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 24
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [25] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 25
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [26] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 26
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [27] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 27
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+    [28] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 28
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [29] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 29
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [30] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 30
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [31] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 31
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [32] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 32
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [33] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 33
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [34] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 34
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [35] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 35
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [36] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 36
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [37] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 37
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [38] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 38
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [39] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 39
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [40] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 40
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [41] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 41
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [42] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 42
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [43] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 43
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [44] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 44
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+    [45] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 45
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [46] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 46
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [47] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 47
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+    [48] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 48
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [49] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 49
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [50] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 50
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [51] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 51
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [52] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 52
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [53] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 53
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [54] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 54
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [55] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 55
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [56] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 56
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [57] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 57
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [58] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 58
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [59] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 59
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [60] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 60
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [61] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 61
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [62] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 62
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [63] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 63
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [64] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 64
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [65] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 65
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [66] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 66
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [67] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 67
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [68] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 68
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [69] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 69
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [70] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 70
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [71] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 71
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [72] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 72
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [73] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 73
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [74] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 74
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [75] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 75
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [76] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 76
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [77] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 77
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [78] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 78
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [79] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 79
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [80] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 80
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [81] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 81
+            [level:App\Comment\Comment:private] => 2
+            [parent:App\Comment\Comment:private] => 1
+        )
+
+    [82] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 82
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [83] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 83
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [84] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 84
+            [level:App\Comment\Comment:private] => 0
+            [parent:App\Comment\Comment:private] => 
+        )
+
+    [85] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 85
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [86] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 86
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+    [87] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 87
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [88] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 88
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [89] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 89
+            [level:App\Comment\Comment:private] => 7
+            [parent:App\Comment\Comment:private] => 8
+        )
+
+    [90] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 90
+            [level:App\Comment\Comment:private] => 5
+            [parent:App\Comment\Comment:private] => 4
+        )
+
+    [91] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 91
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [92] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 92
+            [level:App\Comment\Comment:private] => 4
+            [parent:App\Comment\Comment:private] => 3
+        )
+
+    [93] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 93
+            [level:App\Comment\Comment:private] => 6
+            [parent:App\Comment\Comment:private] => 5
+        )
+
+    [94] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 94
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [95] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 95
+            [level:App\Comment\Comment:private] => 3
+            [parent:App\Comment\Comment:private] => 2
+        )
+
+    [96] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 96
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+    [97] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 97
+            [level:App\Comment\Comment:private] => 8
+            [parent:App\Comment\Comment:private] => 12
+        )
+
+    [98] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 98
+            [level:App\Comment\Comment:private] => 1
+            [parent:App\Comment\Comment:private] => 0
+        )
+
+    [99] => App\Comment\Comment Object
+        (
+            [number:App\Comment\Comment:private] => 99
+            [level:App\Comment\Comment:private] => 9
+            [parent:App\Comment\Comment:private] => 18
+        )
+
+)
