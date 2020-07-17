@@ -10,7 +10,7 @@ class Subject implements \SplSubject
 
     public function __counstruct()
     {
-        $this->observers = new \SplObjectStorage();
+        $this->observers = new \SplObjectStorage;
     }
 
     public function attach(\SplObserver $observer): void
