@@ -4,15 +4,15 @@ namespace App\Patterns\Observer;
 
 class Discount implements \SplObserver
 {
-    private $goodDiscount;
+    private $good;
 
-    public function update(\SplSubject $subject): bool
+    public function update(\SplSubject $subject): void
     {
-        if ($subject->state > 5) return $goodDiscount = true;
+        $this->good = true;
     }
 
-    public function isGoodDiscount()
+    public function isGood():bool
     {
-        return $this->goodDiscount;
+        return $this->good;
     }
 }

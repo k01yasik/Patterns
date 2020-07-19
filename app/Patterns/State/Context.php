@@ -17,8 +17,8 @@ class Context
         $this->state->setContext($this);
     }
 
-    public function request(): void
+    public function request(): int
     {
-        $this->state->handle();
+        return $this->state->handle();
     }
 }

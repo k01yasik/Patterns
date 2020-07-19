@@ -20,6 +20,6 @@ class ObserverTest extends TestCase
 
         $subject->someBusinessLogic();
 
-        $this->assertEquals(true, $discount->isGoodDiscount());
+        $this->assertEquals(true, $discount->isGood());
     }
 }

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Patterns\Observer;
 
@@ -8,7 +8,7 @@ class Subject implements \SplSubject
 
     private $observers;
 
-    public function __counstruct()
+    public function __construct()
     {
         $this->observers = new \SplObjectStorage;
     }
